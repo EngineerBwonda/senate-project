@@ -1,0 +1,466 @@
+/* styles/DocumentWallet.module.css */
+
+/* .container {
+  max-width: 1100px;
+ 
+  padding: 1rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  color: #6e7b99;
+  background: #f5f5f5;
+ 
+  margin: 0px;
+  margin-bottom: 0px;
+} */
+
+/* Header */
+/* .header {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+.title {
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 470;
+  color: #0f172a;
+  text-align: start;
+}
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: #475569;
+  font-size: 0.95rem;
+} */
+
+/* Grid: two columns on small screens and up; one column on ultra-tiny screens */
+/* .grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); two columns by default (small+ screens) */
+/* }
+@media (max-width: 340px) {
+  .grid {
+    grid-template-columns: 1fr; 
+  }
+} */
+
+/* Link wrapping card - remove underline and ensure block behavior */
+/* .cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+} */
+
+/* Card base */
+/* .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 0 rgba(10, 10, 10, 0.04);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+} */
+
+/* .shade1 {
+  background: #ffffff;
+} 
+.shade2 {
+  background: #ffffff;
+} 
+.shade3 {
+  background: #ffffff;
+}
+.shade4 {
+  background: #ffffff;
+}
+.shade5 {
+  background: #ffffff;
+}
+.shade6 {
+  background: #ffffff;
+} */
+
+/* Icon circle and icon */
+/* .iconWrap {
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(37, 99, 235, 0.08);  */
+/* } */
+/* .icon {
+  font-size: 10px; 
+  color: #2563eb; 
+  height: 45px;
+  width: 45px;
+} */
+
+/* Title beneath the icon */
+/* .cardTitle {
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+  color: #0f172a;
+} */
+
+/* Reduce padding on very small screens */
+/* @media (max-width: 420px) {
+  .card {
+    padding: 0.85rem;
+  }
+  .iconWrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+  }
+  .icon {
+    font-size: 18px;
+  } */
+
+/* DocumentWalletCards.module.css
+   Industrial • official • mobile-first
+   Keeps all class names and layout from the original code.
+*/
+
+/* --- design tokens --- */
+/* DocumentWalletCards.module.css
+   Mobile-first • two-column cards on phones • industrial official look
+   Keeps all original class names so no JS changes required.
+*/
+
+/* --- design tokens (mobile-first) --- */
+:root {
+  --bg: #f7fbff;
+  --panel: #ffffff;
+  --muted-text: #56657a;
+  --text: #07112a;
+  --accent-blue: #0b57a4;
+  --accent-mid: #1473d6;
+  --steel-1: #e9f1fb;
+  --steel-2: #dfeaf8;
+  --card-border: rgba(11, 87, 164, 0.08);
+  --glass: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.99),
+    rgba(250, 252, 255, 0.99)
+  );
+  --shadow-sm: 0 6px 18px rgba(7, 17, 42, 0.06);
+  --shadow-md: 0 14px 36px rgba(7, 17, 42, 0.1);
+  --radius-lg: 12px;
+  --radius-sm: 10px;
+  --focus: 3px solid rgba(11, 87, 164, 0.12);
+  --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  --touch-pad: 12px;
+}
+
+/* --- page / container (mobile-first compact padding) --- */
+.container {
+  max-width: 1100px;
+  padding: 12px; /* mobile-first padding */
+  margin: 0 auto;
+  font-family: var(--font-sans);
+  color: var(--muted-text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- header --- */
+.header {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.title {
+  font-size: 1.25rem; /* comfortable on phones */
+  margin: 0;
+  font-weight: 700;
+  color: var(--text);
+  text-align: left;
+  letter-spacing: -0.2px;
+}
+.subtitle {
+  margin: 4px 0 0 0;
+  color: var(--muted-text);
+  font-size: 0.88rem;
+}
+
+/* subtle decorative divider */
+.header::after {
+  content: "";
+  flex: 1 1 auto;
+  height: 1px;
+  margin-left: 12px;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 87, 164, 0.06),
+    rgba(11, 87, 164, 0.02)
+  );
+}
+
+/* --- grid: two columns by default (mobile-first) --- */
+.grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* TWO columns on mobile-first and all mobile widths */
+  align-items: stretch;
+}
+
+/* Note: explicit ultra-narrow fallback removed so mobile device widths keep 2 columns */
+
+/* medium screens: keep two columns but increase gap and padding */
+@media (min-width: 640px) {
+  .grid {
+    gap: 14px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* large screens: show 3 columns */
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+}
+
+/* Link wrapper */
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-radius: var(--radius-lg);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Card base — mobile-first touch friendly */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px; /* comfy for thumbs */
+  border-radius: var(--radius-lg);
+  background: var(--glass);
+  border: 1px solid var(--card-border);
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    border-color 0.12s ease;
+  color: inherit;
+  min-height: 110px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  /* -webkit-user-select: none; */
+}
+
+/* hover/tap feedback */
+.card:hover,
+.card:active {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(11, 87, 164, 0.14);
+}
+
+/* keyboard focus */
+.card:focus-within,
+.card:focus {
+  outline: none;
+  box-shadow: var(--shadow-md);
+  border-color: rgba(11, 87, 164, 0.16);
+}
+
+/* Shades — gentle variations for visual separation */
+.shade1 {
+  background: linear-gradient(180deg, #ffffff, #fcfdff);
+}
+.shade2 {
+  background: linear-gradient(180deg, #fbfdff, #ffffff);
+}
+.shade3 {
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+.shade4 {
+  background: linear-gradient(180deg, #ffffff, #f6f9ff);
+}
+.shade5 {
+  background: linear-gradient(180deg, #ffffff, #fbfcff);
+}
+.shade6 {
+  background: linear-gradient(180deg, #ffffff, #f7f9ff);
+}
+
+/* Icon circle — slightly smaller on mobile but touch-friendly */
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 87, 164, 0.06),
+    rgba(20, 115, 214, 0.02)
+  );
+  border: 1px solid rgba(11, 87, 164, 0.06);
+  box-shadow: inset 0 -5px 12px rgba(11, 87, 164, 0.02);
+  flex-shrink: 0;
+}
+
+/* Icon sizing tuned for FA SVGs */
+.icon {
+  font-size: 20px;
+  color: var(--accent-blue);
+  width: 30px;
+  height: 30px;
+}
+
+/* Title */
+.cardTitle {
+  font-size: 0.95rem;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text);
+  letter-spacing: -0.2px;
+}
+
+/* decorative ribbon top-left for an official cue */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 24px;
+  height: 6px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-mid));
+  border-radius: 4px;
+  opacity: 0.9;
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+/* bottom gloss */
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 87, 164, 0.02),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+}
+
+/* smaller screens tweaks for legibility and spacing */
+@media (max-width: 420px) {
+  .card {
+    padding: 10px;
+    min-height: 94px;
+    gap: 8px;
+  }
+  .iconWrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+  }
+  .icon {
+    font-size: 18px;
+    width: 28px;
+    height: 28px;
+  }
+  .title {
+    font-size: 1.12rem;
+  }
+  .cardTitle {
+    font-size: 0.92rem;
+  }
+}
+
+/* ensure good keyboard focus for links inside cards (if any) */
+.cardLink:focus-visible,
+.card:focus-visible {
+  outline: var(--focus);
+  outline-offset: 3px;
+}
+
+/* container background & vertical padding tuned for mobile */
+.container {
+  background: linear-gradient(180deg, #f9fbff 0%, #f7fbff 100%);
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+/* header typography adjustments */
+.header .title {
+  font-size: 1.28rem;
+}
+.header .subtitle {
+  font-size: 0.88rem;
+  color: var(--muted-text);
+}
+
+/* accessibility: increase hit area for icons/text */
+.card,
+.cardLink,
+.iconWrap {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* desktop polish */
+@media (min-width: 900px) {
+  .container {
+    padding: 18px;
+  }
+  .card {
+    padding: 18px;
+    min-height: 120px;
+  }
+  .iconWrap {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+  }
+  .icon {
+    font-size: 22px;
+    width: 34px;
+    height: 34px;
+  }
+  .cardTitle {
+    font-size: 1rem;
+  }
+}
+
+/* very wide screens: denser grid */
+@media (min-width: 1400px) {
+  .grid {
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

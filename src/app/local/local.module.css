@@ -1,0 +1,439 @@
+/* styles/LocalDelegation.module.css */
+/* Mobile-first — industrial white & blue theme (consistent with other pages) */
+
+:root {
+  --blue-700: #0b57a4;
+  --blue-500: #1473d6;
+  --muted: #6b7280;
+  --card-border: #dbe6f6;
+  --shadow: 0 8px 28px rgba(9, 30, 66, 0.06);
+  --radius: 10px;
+}
+
+/* Page container */
+.page {
+  padding: 14px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+  color: #0b2340;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(250, 250, 252, 0.95)
+  );
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  padding: 10px;
+  box-shadow: var(--shadow);
+}
+.title {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--blue-700);
+  font-weight: 800;
+}
+.subtitle {
+  margin: 6px 0 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* header actions */
+.headerActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.iconBtn {
+  background: transparent;
+  border: 1px solid var(--card-border);
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--blue-700);
+  font-weight: 700;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+.iconLabel {
+  display: none;
+}
+@media (min-width: 600px) {
+  .iconLabel {
+    display: inline-block;
+  }
+}
+
+/* Tabs */
+.tabBar {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  overflow: auto;
+  padding-bottom: 6px;
+}
+.tab,
+.tabActive {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: transparent;
+  color: var(--blue-700);
+  font-weight: 700;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.tabActive {
+  background: var(--blue-500);
+  color: white;
+  box-shadow: 0 6px 12px rgba(20, 115, 214, 0.12);
+}
+
+/* Section */
+.section {
+  margin-top: 12px;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: white;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  flex: 1 1 220px;
+}
+.searchIcon {
+  color: var(--muted);
+}
+.searchInput {
+  border: 0;
+  outline: 0;
+  min-width: 80px;
+  background: transparent;
+  font-size: 0.95rem;
+}
+.clearBtn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* Grid for schools */
+.grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card (school) */
+.card {
+  display: flex;
+  gap: 12px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 20px rgba(9, 30, 66, 0.04);
+  align-items: flex-start;
+}
+.cardLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 115, 214, 0.03),
+    rgba(10, 57, 120, 0.02)
+  );
+  border: 1px solid rgba(11, 87, 164, 0.06);
+  color: var(--blue-700);
+  font-size: 20px;
+}
+.cardBody {
+  flex: 1;
+  min-width: 0;
+}
+.cardTitle {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--blue-700);
+  font-weight: 800;
+}
+.cardMeta {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.cardContact {
+  margin-top: 8px;
+  color: #1f2937;
+  font-size: 0.88rem;
+}
+
+/* Person list */
+.personList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.personRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 6px 18px rgba(9, 30, 66, 0.04);
+  align-items: center;
+}
+.personInfo {
+  min-width: 0;
+}
+.personName {
+  font-weight: 800;
+  color: var(--blue-700);
+}
+.personMeta {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.personSub {
+  margin-top: 6px;
+  color: #1f2937;
+  font-size: 0.88rem;
+}
+.personActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* check button */
+.checkBtn {
+  background: transparent;
+  border: 1px solid var(--card-border);
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--blue-700);
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+.checkLabel {
+  display: none;
+}
+@media (min-width: 600px) {
+  .checkLabel {
+    display: inline-block;
+  }
+}
+
+/* Groups */
+.groupGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media (min-width: 700px) {
+  .groupGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.groupCard {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 20px rgba(9, 30, 66, 0.04);
+}
+.groupTitle {
+  margin: 0;
+  color: var(--blue-700);
+  font-weight: 800;
+}
+.groupMeta {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.groupPurpose {
+  margin-top: 8px;
+  color: #1f2937;
+}
+
+/* Volunteers list */
+.volList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.volItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 6px 18px rgba(9, 30, 66, 0.04);
+}
+.volName {
+  font-weight: 800;
+  color: var(--blue-700);
+}
+.volMeta {
+  color: var(--muted);
+}
+
+/* Footer */
+.footer {
+  margin-top: 12px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Subtitles */
+.subTitle {
+  margin: 10px 0 6px 0;
+  color: var(--blue-700);
+  font-weight: 800;
+}
+
+/* Modal / details */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 12, 24, 0.5);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+.modalCard {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 20px 40px rgba(9, 30, 66, 0.12);
+  position: relative;
+}
+.modalClose {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: transparent;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--blue-700);
+  font-size: 16px;
+}
+.modalRow {
+  margin-top: 8px;
+  color: #1f2937;
+}
+
+/* Buttons */
+.btn {
+  background: var(--blue-700);
+  color: white;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btnGhost {
+  background: transparent;
+  border: 1px solid var(--card-border);
+  color: var(--blue-700);
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Utilities */
+.sep {
+  opacity: 0.6;
+  margin: 0 6px;
+  color: var(--muted);
+}
+
+/* Accessible focus */
+.card:focus-within,
+.checkBtn:focus,
+.iconBtn:focus,
+.tab:focus,
+.tabActive:focus,
+.btn:focus {
+  outline: 3px solid rgba(20, 115, 214, 0.12);
+  outline-offset: 2px;
+}
+
+/* Small screens adjustments */
+@media (max-width: 420px) {
+  .cardLeft {
+    width: 48px;
+    height: 48px;
+  }
+  .personRow {
+    padding: 8px;
+  }
+  .checkBtn {
+    padding: 6px 8px;
+  }
+}
