@@ -1,4 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BottomTabNav from "./component/navigation/page";
@@ -33,6 +35,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
         <BottomTabNav />
+        <Analytics />
 
         <wallet />
       </body>
