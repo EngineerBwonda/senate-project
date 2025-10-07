@@ -347,7 +347,7 @@
 }
 
 /* decorative ribbon top-left for an official cue */
-.card::before {
+/* .card::before {
   content: "";
   position: absolute;
   top: 10px;
@@ -359,7 +359,7 @@
   opacity: 0.9;
   transform: rotate(-2deg);
   pointer-events: none;
-}
+} */
 
 /* bottom gloss */
 .card::after {
