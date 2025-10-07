@@ -93,6 +93,9 @@
   width: 6px;
   height: 28px;
   background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  /* background: linear-gradient(180deg, #2563eb, #1e3a8a); */
+  background: var(--accent);
+
   border-radius: 3px;
   box-shadow: 0 4px 10px rgba(11, 87, 164, 0.08);
 }
