@@ -68,7 +68,7 @@ export default function DocumentWalletPage() {
           shadeClass="shade3"
         />
         <Card
-          href="/meetings"
+          href="/meeting"
           title="Meetings"
           icon={faUsers}
           shadeClass="shade4"

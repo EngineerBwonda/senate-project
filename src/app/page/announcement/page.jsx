@@ -19,7 +19,7 @@ export default function AnnouncementPage() {
               </span>
             </Link>
 
-            <Link href="/external-meeting" className={styles.card}>
+            <Link href="/meeting" className={styles.card}>
               <h2 className={styles.title}>External Meeting</h2>
               <span className="position-absolute top-0 end-0 badge rounded-pill bg-primary">
                 9+
