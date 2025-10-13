@@ -24,33 +24,33 @@ import styles from "./photo.module.css";
 const IMAGE_LIST = [
   {
     id: "p1",
-    src: "/photos/liaison-visit-1.jpg",
-    caption: "County site visit — progress review",
+    src: "/teambuilding.jpeg",
+    caption: "Team building retreat",
   },
   {
     id: "p2",
-    src: "/photos/liaison-visit-2.jpg",
-    caption: "Stakeholder forum — plenary session",
+    src: "/walk.jpeg",
+    caption: "Morning walk during retreat",
   },
   {
     id: "p3",
-    src: "/photos/liaison-visit-3.jpg",
-    caption: "Team briefing before field visit",
+    src: "/zip.jpeg",
+    caption: "Zip-lining activity",
   },
   {
     id: "p4",
-    src: "/photos/liaison-visit-4.jpg",
-    caption: "Documentation & records review",
+    src: "/groupic.jpeg",
+    caption: "Group photo",
   },
   {
     id: "p5",
-    src: "/photos/liaison-visit-5.jpg",
-    caption: "Public engagement — Q&A",
+    src: "/race.jpeg",
+    caption: "Fun race activity",
   },
   {
     id: "p6",
-    src: "/photos/liaison-visit-6.jpg",
-    caption: "Delegation group photo",
+    src: "/boat.jpeg",
+    caption: "water activity",
   },
   // add more images (place them in /public/photos/)
 ];
