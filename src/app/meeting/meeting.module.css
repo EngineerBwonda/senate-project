@@ -32,8 +32,8 @@
   justify-content: space-between;
   margin-bottom: 12px;
 }
-.headerLeft {
-}
+/* .headerLeft {
+} */
 .h1 {
   margin: 0;
   font-size: 1.1rem;
@@ -180,8 +180,8 @@
   gap: 12px;
   align-items: flex-start;
 }
-.cardTitleWrap {
-}
+/* .cardTitleWrap {
+} */
 .cardTitle {
   margin: 0;
   font-size: 1rem;
@@ -210,8 +210,8 @@
 }
 
 /* mode badge */
-.modeWrap {
-}
+/* .modeWrap {
+} */
 .modeBadge {
   display: inline-flex;
   gap: 8px;
