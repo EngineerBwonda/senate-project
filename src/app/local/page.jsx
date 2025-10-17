@@ -123,7 +123,7 @@ const INTERNS = [
     name: "Alice Njeri",
     department: "Communications",
     expiry: "2025-11-15",
-    school: "Nairobi High School",
+    school: "Nairobi University",
     checkedIn: false,
   },
   {
@@ -131,7 +131,7 @@ const INTERNS = [
     name: "Brian Ouma",
     department: "Logistics",
     expiry: "2025-12-01",
-    school: "Kisumu Girls' Academy",
+    school: "Maseno University",
     checkedIn: false,
   },
   {
@@ -147,7 +147,7 @@ const INTERNS = [
     name: "David Kimani",
     department: "Admin",
     expiry: "2025-10-25",
-    school: "Eldoret Preparatory",
+    school: "Maseno University",
     checkedIn: false,
   },
   {
@@ -155,7 +155,7 @@ const INTERNS = [
     name: "Evelyn W.",
     department: "Finance",
     expiry: "2026-01-05",
-    school: "Nyeri County Secondary",
+    school: "Jomo Kenyatta University",
     checkedIn: false,
   },
   {
@@ -163,7 +163,7 @@ const INTERNS = [
     name: "Frankline S.",
     department: "IT",
     expiry: "2026-02-20",
-    school: "Nairobi High School",
+    school: "Multimedia University",
     checkedIn: false,
   },
 ];
